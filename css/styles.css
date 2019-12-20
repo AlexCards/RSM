@@ -1,0 +1,130 @@
+@font-face {
+  src: url(/Fonts/Archive.otf);
+  font-family: "Archive";
+  src: url(/Fonts/Roboto-Bold.ttf);
+  src: url(/Fonts/Roboto-BoldItalic.ttf);
+  src: url(/Fonts/Roboto-Italic.ttf);
+  src: url(/Fonts/Roboto-Light.ttf);
+  src: url(/Fonts/Roboto-Medium.ttf);
+  src: url(/Fonts/Roboto-Regular.ttf);
+  src: url(/Fonts/Roboto-Thin.ttf);
+  src: url(/Fonts/RobotoCondensed-Bold.ttf);
+  src: url(/Fonts/RobotoCondensed-Regular.ttf);
+  font-family: Roboto;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  background-color: #ffffff;
+}
+
+header .logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-area: logo;
+  width: 240px;
+  height: 70px;
+  background-color: #ffcd00;
+}
+
+header .logoContainer .rsmLogo {
+  width: 187px;
+  height: 24px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+header ul {
+  display: none;
+  grid-area: logoNav;
+}
+
+header li {
+  list-style-type: none;
+  background-color: lightskyblue;
+}
+
+header li a {
+  text-decoration: none;
+  font-family: roboto;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: lightsalmon;
+  color: #2f2f2f;
+}
+
+nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: nav;
+  background-color: green;
+}
+
+.slider {
+  background-color: yellow;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: slider;
+}
+
+.contentTop {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: contentTop;
+  background: blue;
+  width: 470px;
+      justify-self: end;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #edf0f1;
+  background-image: url(/Images/background_main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+header,
+nav {
+  height: 70px;
+}
+
+.slider,
+.contentTop {
+  height: 340px;
+}
+
+article {
+  width: 1440px;
+  margin: 30px auto 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 240px 720px 480px;
+      grid-template-columns: 240px 720px 480px;
+  -ms-grid-rows: 70px 70px 340px;
+      grid-template-rows: 70px 70px 340px;
+      grid-template-areas: "header header header" "nav nav nav" "slider slider contentTop";
+  grid-row-gap: 10px;
+}
+/*# sourceMappingURL=styles.css.map */

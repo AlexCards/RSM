@@ -1,0 +1,45 @@
+@import "mixins";
+
+header {
+  grid-area: header;
+
+  background-color: #ffffff;
+
+  .logoContainer {
+    @include flex(center, center);
+
+    grid-area: logo;
+
+    width: 240px;
+    height: 70px;
+
+    background-color: #ffcd00;
+
+    .rsmLogo {
+      width: 187px;
+      height: 24px;
+      align-self: center;
+    }
+  }
+
+  ul {
+    display: none;
+
+    grid-area: logoNav;
+  }
+
+  li {
+    list-style-type: none;
+    background-color: lightskyblue;
+    a {
+      text-decoration: none;
+      font-family: roboto;
+      font-weight: normal;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      background-color: lightsalmon;
+      color: #2f2f2f;
+    }
+  }
+}

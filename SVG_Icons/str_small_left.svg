@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 6.4 10" enable-background="new 0 0 6.4 10" xml:space="preserve">
+<g id="MouseOff">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M4.7,9.7L0,5l4.7-4.7c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L2.8,5l3.3,3.3
+		c0.4,0.4,0.4,1,0,1.4C5.7,10.1,5.1,10.1,4.7,9.7z"/>
+</g>
+<g id="MouseOver" display="none">
+</g>
+</svg>
