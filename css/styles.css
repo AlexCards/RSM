@@ -16,8 +16,15 @@
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 2;
   grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
   background-color: #ffffff;
 }
 
@@ -30,7 +37,6 @@ header .logoContainer {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  grid-area: logo;
   width: 240px;
   height: 70px;
   background-color: #ffcd00;
@@ -44,30 +50,64 @@ header .logoContainer .rsmLogo {
       align-self: center;
 }
 
-header ul {
-  display: none;
-  grid-area: logoNav;
+header .headerNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 header li {
   list-style-type: none;
-  background-color: lightskyblue;
 }
 
 header li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
   text-decoration: none;
   font-family: roboto;
   font-weight: normal;
   font-size: 14px;
   text-transform: uppercase;
-  background-color: lightsalmon;
   color: #2f2f2f;
+}
+
+header .search {
+  width: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .search input {
+  padding-left: 10px;
+  border: none;
+  font-size: 16px;
+  width: 150px;
+}
+
+header .search .searchBtn {
+  background-image: url(/SVG_Icons/search_big.svg);
+  width: 19px;
+  height: 20px;
+  margin: 25px;
 }
 
 nav {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-column-span: 2;
   grid-area: nav;
   background-color: green;
 }
@@ -76,14 +116,13 @@ nav {
   background-color: yellow;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: slider;
 }
 
-.contentTop {
+.catalog {
   -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: contentTop;
+  -ms-grid-column: 2;
+  grid-area: catalog;
   background: blue;
   width: 470px;
       justify-self: end;
@@ -120,11 +159,11 @@ article {
   margin: 30px auto 0px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 240px 720px 480px;
-      grid-template-columns: 240px 720px 480px;
+  -ms-grid-columns: 960px 480px;
+      grid-template-columns: 960px 480px;
   -ms-grid-rows: 70px 70px 340px;
       grid-template-rows: 70px 70px 340px;
-      grid-template-areas: "header header header" "nav nav nav" "slider slider contentTop";
+      grid-template-areas: "header header" "nav nav" "slider catalog";
   grid-row-gap: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
