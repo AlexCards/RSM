@@ -97,11 +97,14 @@ header .search input {
   width: 150px;
 }
 
-header .search .searchBtn {
-  background-image: url(/SVG_Icons/search_big.svg);
+header .search button {
+  fill: #a0aeb5;
+  background-color: white;
+  border: none;
   width: 19px;
   height: 20px;
   margin: 25px;
+  cursor: pointer;
 }
 
 nav {
