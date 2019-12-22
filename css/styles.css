@@ -23,8 +23,9 @@ header {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #ffffff;
 }
 
@@ -35,19 +36,32 @@ header .logoContainer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 240px;
   height: 70px;
   background-color: #ffcd00;
 }
 
-header .logoContainer .rsmLogo {
-  width: 187px;
-  height: 24px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+header .logoContainer .bolt {
+  width: 7.5px;
+  height: 8px;
+  margin: 7px;
+  fill: white;
+}
+
+header .logoContainer .rsm {
+  width: 70px;
+  height: 25px;
+  margin-right: 7px;
+  fill: #333333;
+}
+
+header .logoContainer .shop {
+  width: 94px;
+  height: 25px;
+  fill: white;
 }
 
 header .headerNav {
@@ -56,11 +70,13 @@ header .headerNav {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  height: 100%;
 }
 
 header li {
@@ -68,19 +84,21 @@ header li {
 }
 
 header li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
   text-decoration: none;
   font-family: roboto;
   font-weight: normal;
   font-size: 14px;
   text-transform: uppercase;
   color: #2f2f2f;
+}
+
+header .headerContacts a:before {
+  content: url("/SVG_Icons/place.svg");
+  display: inline-block;
+  margin-right: 10px;
+  width: 12px;
+  height: 15px;
+  fill: #aab7bd;
 }
 
 header .search {
