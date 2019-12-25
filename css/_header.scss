@@ -35,12 +35,10 @@ header {
 
   .headerNav {
     @include flex(space-around, center);
-    flex: 1;
-    height: 100%;
-  }
+    width: auto;
 
-  li {
     a {
+      margin-left: 50px;
       font-weight: normal;
       font-size: 14px;
       text-transform: uppercase;
@@ -52,11 +50,23 @@ header {
 
   .headerContacts {
     display: flex;
-    flex: 0.5;
-    justify-content: space-around;
+    margin-left: auto;
+
+    a,
+    p {
+      width: auto;
+      margin-right: 50px;
+    }
     a {
       color: #2f2f2f;
       font-size: 16px;
+      .city {
+        border-bottom: 1px dashed;
+        border-color: #a0aeb5;
+        &:hover {
+          border: none;
+        }
+      }
 
       &:before {
         content: url("/SVG_Icons/place.svg");
@@ -67,16 +77,16 @@ header {
         filter: invert(73%) sepia(10%) saturate(327%) hue-rotate(155deg)
           brightness(93%) contrast(87%);
       }
+      &:hover:before {
+        filter: invert(58%) sepia(99%) saturate(483%) hue-rotate(5deg)
+          brightness(99%) contrast(101%);
+      }
     }
   }
 
   a {
     &:hover {
       color: #efb526;
-    }
-    &:hover:before {
-      filter: invert(58%) sepia(99%) saturate(483%) hue-rotate(5deg)
-        brightness(99%) contrast(101%);
     }
   }
 
