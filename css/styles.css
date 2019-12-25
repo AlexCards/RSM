@@ -108,10 +108,6 @@ header .headerContacts a .city {
   border-color: #a0aeb5;
 }
 
-header .headerContacts a .city:hover {
-  border: none;
-}
-
 header .headerContacts a:before {
   content: url("/SVG_Icons/place.svg");
   display: inline-block;
@@ -125,6 +121,10 @@ header .headerContacts a:before {
 header .headerContacts a:hover:before {
   -webkit-filter: invert(58%) sepia(99%) saturate(483%) hue-rotate(5deg) brightness(99%) contrast(101%);
           filter: invert(58%) sepia(99%) saturate(483%) hue-rotate(5deg) brightness(99%) contrast(101%);
+}
+
+header .headerContacts a:hover .city {
+  border: none;
 }
 
 header a:hover {
@@ -173,11 +173,56 @@ header .search button svg {
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: nav;
-  background-color: green;
+  background-color: #ffffff;
+}
+
+nav a {
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #2f2f2f;
+  letter-spacing: 0.025em;
+}
+
+nav a:hover {
+  color: #efb526;
+}
+
+nav :first-child {
+  width: 292px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav :first-child:before {
+  content: url(/SVG_Icons/menu.svg);
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+  margin-right: 20px;
+  -webkit-filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(217deg) brightness(92%) contrast(87%);
+          filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(217deg) brightness(92%) contrast(87%);
+}
+
+nav :first-child:hover {
+  background-color: #fdfcfa;
 }
 
 .slider {

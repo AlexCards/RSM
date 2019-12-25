@@ -3,3 +3,12 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin nav {
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  color: #2f2f2f;
+  letter-spacing: 0.025em;
+}

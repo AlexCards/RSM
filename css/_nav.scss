@@ -1,5 +1,41 @@
-nav {
-  grid-area: nav;
+@import "mixins";
 
-  background-color: green;
+nav {
+  @include flex(space-around, center);
+
+  grid-area: nav;
+  background-color: #ffffff;
+
+  a {
+    @include nav;
+    &:hover {
+      color: #efb526;
+    }
+  }
+
+  :first-child {
+    width: 292px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: url(/SVG_Icons/menu.svg);
+
+      display: inline-block;
+
+      width: 20px;
+      height: 14px;
+
+      margin-right: 20px;
+
+      filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(217deg)
+        brightness(92%) contrast(87%);
+    }
+
+    &:hover {
+      background-color: #fdfcfa;
+    }
+  }
 }

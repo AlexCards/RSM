@@ -39,12 +39,7 @@ header {
 
     a {
       margin-left: 50px;
-      font-weight: normal;
-      font-size: 14px;
-      text-transform: uppercase;
-
-      color: #2f2f2f;
-      letter-spacing: 0.025em;
+      @include nav;
     }
   }
 
@@ -63,9 +58,6 @@ header {
       .city {
         border-bottom: 1px dashed;
         border-color: #a0aeb5;
-        &:hover {
-          border: none;
-        }
       }
 
       &:before {
@@ -80,6 +72,12 @@ header {
       &:hover:before {
         filter: invert(58%) sepia(99%) saturate(483%) hue-rotate(5deg)
           brightness(99%) contrast(101%);
+      }
+
+      &:hover {
+        .city {
+          border: none;
+        }
       }
     }
   }
