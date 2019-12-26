@@ -5,10 +5,17 @@
 }
 
 @mixin nav {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
 
   color: #2f2f2f;
   letter-spacing: 0.025em;
+}
+
+@mixin border {
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: 1px solid #dfe4e6;
 }

@@ -78,7 +78,7 @@ header .headerNav {
 
 header .headerNav a {
   margin-left: 50px;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
   color: #2f2f2f;
@@ -140,11 +140,11 @@ header .search {
 }
 
 header .search input {
-  padding-left: 20px;
   border-top: none;
   border-right: none;
   border-bottom: none;
   border-left: 1px solid #dfe4e6;
+  padding-left: 20px;
   font-size: 16px;
   width: 150px;
 }
@@ -189,23 +189,33 @@ nav {
 }
 
 nav a {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
   color: #2f2f2f;
   letter-spacing: 0.025em;
 }
 
-nav a:hover {
+nav a:hover:not(:first-child) {
   color: #efb526;
 }
 
+nav a:not(.shop) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 nav :first-child {
-  width: 292px;
+  width: 272px;
   height: 40px;
+  border-radius: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -216,13 +226,58 @@ nav :first-child:before {
   display: inline-block;
   width: 20px;
   height: 14px;
-  margin-right: 20px;
+  padding-right: 20px;
   -webkit-filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(217deg) brightness(92%) contrast(87%);
           filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(217deg) brightness(92%) contrast(87%);
 }
 
-nav :first-child:hover {
-  background-color: #fdfcfa;
+nav :first-child:hover:not(svg) {
+  background-color: #f3f2e6;
+}
+
+nav .shop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: 1px solid #dfe4e6;
+  position: relative;
+  width: 70px;
+  height: 100%;
+}
+
+nav .shop svg {
+  width: 26px;
+  height: 23px;
+  fill: #a0aeb5;
+}
+
+nav .shop .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 200px;
+  background-color: #efb526;
+  color: white;
 }
 
 .slider {
@@ -256,7 +311,6 @@ body {
   background-color: #edf0f1;
   background-image: url(/Images/background_main.png);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: 100%;
 }
 
