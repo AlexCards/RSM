@@ -1,45 +1,46 @@
 @import "mixins";
 
 nav {
-  @include flex(space-around, center);
-
   grid-area: nav;
   background-color: #ffffff;
-  
-  a {
-    @include nav;
-    &:hover:not(:first-child) {
-      color: #efb526;
-    }
-    &:not(.shop) {
-      flex: 1;
-    }
-  }
+  @include flex(space-around, center);
 
-  :first-child {
-    width: 272px;
-    height: 40px;
+  .navs_container {
+    @include flex(space-around, center);
+    flex: 1;
+    a {
+      @include nav;
 
-    border-radius: 2px;
-
-    @include flex(center, center);
-
-    &:before {
-      content: url(/SVG_Icons/menu.svg);
-
-      display: inline-block;
-
-      width: 20px;
-      height: 14px;
-
-      padding-right: 20px;
-
-      filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(217deg)
-        brightness(92%) contrast(87%);
+      &:hover:not(:first-child) {
+        color: #efb526;
+      }
     }
 
-    &:hover:not(svg) {
-      background-color: #f3f2e6;
+    :first-child {
+      width: 272px;
+      height: 40px;
+
+      border-radius: 2px;
+
+      @include flex(center, center);
+
+      &:before {
+        content: url(/SVG_Icons/menu.svg);
+
+        display: inline-block;
+
+        width: 20px;
+        height: 14px;
+
+        padding-right: 20px;
+
+        filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(217deg)
+          brightness(92%) contrast(87%);
+      }
+
+      &:hover:not(svg) {
+        background-color: #f3f2e6;
+      }
     }
   }
 
@@ -73,5 +74,26 @@ nav {
       background-color: #efb526;
       color: white;
     }
+  }
+}
+
+.fullCatalog {
+  display: block;
+
+  width: 1440px;
+  height: 310px;
+
+  background-color: #3e3e3e;
+
+  animation: slide-bottom 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10px);
   }
 }

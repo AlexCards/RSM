@@ -173,6 +173,11 @@ header .search button svg {
 }
 
 nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nav;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -181,14 +186,23 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: nav;
-  background-color: #ffffff;
 }
 
-nav a {
+nav .navs_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+nav .navs_container a {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
@@ -196,17 +210,11 @@ nav a {
   letter-spacing: 0.025em;
 }
 
-nav a:hover:not(:first-child) {
+nav .navs_container a:hover:not(:first-child) {
   color: #efb526;
 }
 
-nav a:not(.shop) {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-nav :first-child {
+nav .navs_container :first-child {
   width: 272px;
   height: 40px;
   border-radius: 2px;
@@ -221,7 +229,7 @@ nav :first-child {
           align-items: center;
 }
 
-nav :first-child:before {
+nav .navs_container :first-child:before {
   content: url(/SVG_Icons/menu.svg);
   display: inline-block;
   width: 20px;
@@ -231,7 +239,7 @@ nav :first-child:before {
           filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(217deg) brightness(92%) contrast(87%);
 }
 
-nav :first-child:hover:not(svg) {
+nav .navs_container :first-child:hover:not(svg) {
   background-color: #f3f2e6;
 }
 
@@ -280,18 +288,51 @@ nav .shop .counter {
   color: white;
 }
 
+.fullCatalog {
+  display: block;
+  width: 1440px;
+  height: 310px;
+  background-color: #3e3e3e;
+  -webkit-animation: slide-bottom 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-bottom 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
 .slider {
-  background-color: yellow;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: slider;
+  background-image: url(/Images/main_slider_01.jpg);
+  background-size: contain;
 }
 
 .catalog {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: catalog;
-  background: blue;
+  background-image: url(/Images/main_category.jpg);
+  background-size: contain;
   width: 470px;
       justify-self: end;
 }

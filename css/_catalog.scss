@@ -1,6 +1,7 @@
 .catalog {
   grid-area: catalog;
-  background: blue;
+  background-image: url(/Images/main_category.jpg);
+  background-size: contain;
   width: 470px;
   justify-self: end;
 }
