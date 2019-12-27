@@ -1,5 +1,5 @@
 const fullCatalog = document.querySelector(".fullCatalog");
 
 function showFullContainer() {
-  fullCatalog.classList.toggle("fullCatalog");
+  fullCatalog.classList.toggle("fullCatalogOnClick");
 }

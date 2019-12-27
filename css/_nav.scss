@@ -1,9 +1,11 @@
 @import "mixins";
 
 nav {
+  position: relative;
+  @include flex(space-around, center);
+
   grid-area: nav;
   background-color: #ffffff;
-  @include flex(space-around, center);
 
   .navs_container {
     @include flex(space-around, center);
@@ -77,8 +79,12 @@ nav {
   }
 }
 
-.fullCatalog {
+.fullCatalogOnClick {
   display: block;
+
+  position: absolute;
+
+  top: 100%;
 
   width: 1440px;
   height: 310px;
