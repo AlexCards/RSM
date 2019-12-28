@@ -290,52 +290,54 @@ nav .shop .counter {
 }
 
 .fullCatalogOnClick {
-  display: block;
-  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   top: 100%;
   width: 1440px;
-  height: 310px;
   background-color: #3e3e3e;
-  -webkit-animation: slide-bottom 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: slide-bottom 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation-name: height;
+          animation-name: height;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
 }
 
-@-webkit-keyframes slide-bottom {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+@-webkit-keyframes height {
+  from {
+    height: 0px;
   }
-  100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+  to {
+    height: 310px;
   }
 }
 
-@keyframes slide-bottom {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+@keyframes height {
+  from {
+    height: 0px;
   }
-  100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+  to {
+    height: 310px;
   }
+}
+
+.fullCatalogBtnOnClick:before {
+  content: url(/SVG_Icons/close.svg);
 }
 
 .slider {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: slider;
   background-image: url(/Images/main_slider_01.jpg);
   background-size: contain;
 }
 
-.slider .sliderOnClick {
-  margin-top: 310px;
-}
-
 .catalog {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: catalog;
   background-image: url(/Images/main_category.jpg);
@@ -379,9 +381,9 @@ article {
   display: grid;
   -ms-grid-columns: 960px 480px;
       grid-template-columns: 960px 480px;
-  -ms-grid-rows: 70px 70px 340px;
-      grid-template-rows: 70px 70px 340px;
-      grid-template-areas: "header header" "nav nav" "slider catalog";
+  -ms-grid-rows: 70px 70px auto 340px;
+      grid-template-rows: 70px 70px auto 340px;
+      grid-template-areas: "header header" "nav nav" "fullCatalog fullCatalog" "slider catalog";
   grid-row-gap: 10px;
 }
 /*# sourceMappingURL=styles.css.map */
