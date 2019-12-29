@@ -42,6 +42,7 @@ header .logoContainer {
   width: 240px;
   height: 70px;
   background-color: #ffcd00;
+  cursor: pointer;
 }
 
 header .logoContainer .bolt {
@@ -295,6 +296,8 @@ nav .shop .counter {
   display: flex;
   top: 100%;
   width: 1440px;
+  height: 310px;
+  margin: -10px 0px 0px 0px;
   background-color: #3e3e3e;
   -webkit-animation-name: height;
           animation-name: height;
@@ -322,10 +325,6 @@ nav .shop .counter {
   to {
     height: 310px;
   }
-}
-
-.fullCatalogBtnOnClick:before {
-  content: url(/SVG_Icons/close.svg);
 }
 
 .slider {
@@ -374,7 +373,7 @@ nav {
   height: 340px;
 }
 
-article {
+.container {
   width: 1440px;
   margin: 30px auto 0px;
   display: -ms-grid;

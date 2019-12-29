@@ -1,15 +1,7 @@
-const fullCatalog = document.querySelector(".fullCatalog");
-let fullCatalogBtn = getComputedStyle(
-  document.querySelector("#fullCatalogBtn"),
-  ":before"
-).getPropertyValue("content");
+document.addEventListener("DOMContentLoaded", () => {
+  const fullCatalog = document.querySelector(".fullCatalog");
 
-console.log(fullCatalogBtn);
-
-
-function showFullContainer() {
-  fullCatalog.classList.toggle("fullCatalogOnClick");
-  fullCatalogBtn = `url("http://127.0.0.1:5500/SVG_Icons/close.svg")`
-  console.log(fullCatalogBtn);
-  
-}
+  showFullContainer = () => {
+    fullCatalog.classList.toggle("fullCatalogOnClick");
+  };
+});

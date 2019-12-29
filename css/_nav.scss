@@ -85,7 +85,9 @@ nav {
   top: 100%;
 
   width: 1440px;
-  // height: 310px;
+  height: 310px;
+
+  margin: -10px 0px 0px 0px;
 
   background-color: #3e3e3e;
 
@@ -102,11 +104,5 @@ nav {
 
   to {
     height: 310px;
-  }
-}
-
-.fullCatalogBtnOnClick {
-  &:before {
-    content: url(/SVG_Icons/close.svg);
   }
 }
