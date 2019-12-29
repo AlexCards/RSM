@@ -204,7 +204,8 @@ nav .navs_container {
           flex: 1;
 }
 
-nav .navs_container a {
+nav .navs_container a,
+nav .navs_container button {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
@@ -212,8 +213,15 @@ nav .navs_container a {
   letter-spacing: 0.025em;
 }
 
-nav .navs_container a:hover:not(:first-child) {
+nav .navs_container a:hover:not(:first-child),
+nav .navs_container button:hover:not(:first-child) {
   color: #efb526;
+}
+
+nav .navs_container button {
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 nav .navs_container :first-child {
@@ -290,41 +298,14 @@ nav .shop .counter {
   color: white;
 }
 
-.fullCatalogOnClick {
+.fullCatalog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   top: 100%;
   width: 1440px;
-  height: 310px;
   margin: -10px 0px 0px 0px;
   background-color: #3e3e3e;
-  -webkit-animation-name: height;
-          animation-name: height;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-}
-
-@-webkit-keyframes height {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 310px;
-  }
-}
-
-@keyframes height {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 310px;
-  }
 }
 
 .slider {

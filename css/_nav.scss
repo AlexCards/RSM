@@ -10,12 +10,19 @@ nav {
   .navs_container {
     @include flex(space-around, center);
     flex: 1;
-    a {
+    a,
+    button {
       @include nav;
 
       &:hover:not(:first-child) {
         color: #efb526;
       }
+    }
+
+    button {
+      border: none;
+      outline: none;
+      cursor: pointer;
     }
 
     :first-child {
@@ -79,30 +86,16 @@ nav {
   }
 }
 
-.fullCatalogOnClick {
+.fullCatalog {
   display: flex;
 
   top: 100%;
 
   width: 1440px;
-  height: 310px;
 
   margin: -10px 0px 0px 0px;
 
   background-color: #3e3e3e;
-
-  animation-name: height;
-  animation-duration: 0.5s;
-  animation-fill-mode: both;
-  animation-direction: normal;
 }
 
-@keyframes height {
-  from {
-    height: 0px;
-  }
 
-  to {
-    height: 310px;
-  }
-}
