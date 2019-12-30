@@ -5,11 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
   fullCatalog.style.height = "0px";
 
   btn.addEventListener("click", () => {
-    if(fullCatalog.style.height === "0px"){ //open
+    if (fullCatalog.style.height === "0px") {
+      //open
       fullCatalog.style.height = "310px";
-      fullCatalog.style.transition = "height .5s ease"
-    } else{ //close 
+      fullCatalog.style.transition = "height .5s ease";
+    } else {
+      //close
       fullCatalog.style.height = "0px";
     }
-  })
+  });
+
+  
 });
