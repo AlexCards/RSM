@@ -173,6 +173,10 @@ header .search button svg {
   height: 20px;
 }
 
+header .search button, header .search input {
+  outline: none;
+}
+
 nav {
   position: relative;
   display: -webkit-box;
@@ -239,18 +243,35 @@ nav .navs_container :first-child {
           align-items: center;
 }
 
-nav .navs_container :first-child:before {
-  content: url(/SVG_Icons/menu.svg);
+nav .navs_container :first-child img {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
   display: inline-block;
   width: 20px;
   height: 14px;
-  padding-right: 20px;
+  margin-right: 20px;
   -webkit-filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(217deg) brightness(92%) contrast(87%);
           filter: invert(15%) sepia(0%) saturate(0%) hue-rotate(217deg) brightness(92%) contrast(87%);
 }
 
-nav .navs_container :first-child:hover:not(svg) {
+nav .navs_container :first-child:hover:not(img) {
   background-color: #f3f2e6;
+}
+
+nav .navs_container .close {
+  border: 1px solid #dbdbdb;
+}
+
+nav .navs_container .close:hover {
+  background-color: #2f2f2f !important;
+  border: none;
+  color: #ffffff;
+}
+
+nav .navs_container .close:hover img {
+  -webkit-filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(247deg) brightness(103%) contrast(103%);
+          filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(247deg) brightness(103%) contrast(103%);
 }
 
 nav .shop {
@@ -306,6 +327,9 @@ nav .shop .counter {
   width: 1440px;
   margin: -10px 0px 0px 0px;
   background-color: #3e3e3e;
+  background-image: url(/Images/pattern_menu.png);
+  background-repeat: repeat;
+  background-size: 25%;
 }
 
 .slider {
