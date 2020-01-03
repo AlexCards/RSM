@@ -1,6 +1,6 @@
 @font-face {
   src: url(/Fonts/Archive.otf);
-  font-family: "Archive";
+  font-family: Archive;
   src: url(/Fonts/Roboto-Bold.ttf);
   src: url(/Fonts/Roboto-BoldItalic.ttf);
   src: url(/Fonts/Roboto-Italic.ttf);
@@ -8,9 +8,10 @@
   src: url(/Fonts/Roboto-Medium.ttf);
   src: url(/Fonts/Roboto-Regular.ttf);
   src: url(/Fonts/Roboto-Thin.ttf);
+  font-family: Roboto;
   src: url(/Fonts/RobotoCondensed-Bold.ttf);
   src: url(/Fonts/RobotoCondensed-Regular.ttf);
-  font-family: Roboto;
+  font-family: RobotoCondensed;
 }
 
 header {
@@ -229,7 +230,7 @@ nav .navs_container button {
 }
 
 nav .navs_container :first-child {
-  width: 272px;
+  width: 292px;
   height: 40px;
   border-radius: 2px;
   display: -webkit-box;
@@ -330,6 +331,57 @@ nav .shop .counter {
   background-image: url(/Images/pattern_menu.png);
   background-repeat: repeat;
   background-size: 25%;
+}
+
+.fullCatalog table {
+  border-collapse: separate;
+  width: 100%;
+  margin: auto;
+}
+
+.fullCatalog table a {
+  font-family: RobotoCondensed;
+}
+
+.fullCatalog table thead,
+.fullCatalog table tbody,
+.fullCatalog table tr {
+  width: 100%;
+}
+
+.fullCatalog table thead,
+.fullCatalog table tbody {
+  display: inline-block;
+}
+
+.fullCatalog table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.fullCatalog table td,
+.fullCatalog table th {
+  width: 150px;
+  text-align: left;
+}
+
+.fullCatalog table th a {
+  color: #999999;
+  font-size: 20px;
+  line-height: 2.5;
+}
+
+.fullCatalog table td a {
+  color: white;
+  line-height: 2;
+  font-size: 14px;
+}
+
+.fullCatalog table td a:hover {
+  color: #ffb700;
 }
 
 .slider {

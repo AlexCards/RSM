@@ -26,7 +26,7 @@ nav {
     }
 
     :first-child {
-      width: 272px;
+      width: 292px;
       height: 40px;
 
       border-radius: 2px;
@@ -53,11 +53,14 @@ nav {
     }
     .close {
       border: 1px solid #dbdbdb;
-      &:hover{
+      &:hover {
         background-color: #2f2f2f !important;
         border: none;
         color: #ffffff;
-        img{filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(247deg) brightness(103%) contrast(103%)};
+        img {
+          filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(247deg)
+            brightness(103%) contrast(103%);
+        }
       }
     }
   }
@@ -107,4 +110,51 @@ nav {
   background-image: url(/Images/pattern_menu.png);
   background-repeat: repeat;
   background-size: 25%;
+
+  table {
+    border-collapse: separate;
+    width: 100%;
+    margin: auto;
+    a {
+      font-family: RobotoCondensed;
+    }
+
+    thead,
+    tbody,
+    tr {
+      width: 100%;
+    }
+
+    thead,
+    tbody {
+      display: inline-block;
+    }
+    tr {
+      display: flex;
+      justify-content: space-around;
+    }
+    td,
+    th {
+      width: 150px;
+      text-align: left;
+    }
+
+    th {
+      a {
+        color: #999999;
+        font-size: 20px;
+        line-height: 2.5;
+      }
+    }
+    td {
+      a {
+        color: white;
+        line-height: 2;
+        font-size: 14px;
+        &:hover {
+          color: #ffb700;
+        }
+      }
+    }
+  }
 }

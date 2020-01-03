@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
       menuIco.src = "/SVG_Icons/close.svg";
 
       fullCatalog.style.height = "310px";
-      fullCatalog.style.transition = "height .5s ease";
+      fullCatalog.style.transition = "height .3s ease";
 
       this.classList.add("close");
 
-      document.querySelector(".fullCatalog table").style.display = "block";
+      document.querySelector(".fullCatalog table").style.display = "inline-block";
     } else {
       //close
       document.querySelector(".fullCatalog table").style.display = "none";

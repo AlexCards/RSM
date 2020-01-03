@@ -1,6 +1,6 @@
 @font-face {
   src: url(/Fonts/Archive.otf);
-  font-family: "Archive";
+  font-family: Archive;
   src: url(/Fonts/Roboto-Bold.ttf);
   src: url(/Fonts/Roboto-BoldItalic.ttf);
   src: url(/Fonts/Roboto-Italic.ttf);
@@ -8,9 +8,10 @@
   src: url(/Fonts/Roboto-Medium.ttf);
   src: url(/Fonts/Roboto-Regular.ttf);
   src: url(/Fonts/Roboto-Thin.ttf);
+  font-family: Roboto;
   src: url(/Fonts/RobotoCondensed-Bold.ttf);
   src: url(/Fonts/RobotoCondensed-Regular.ttf);
-  font-family: Roboto;
+  font-family: RobotoCondensed;
 }
 
 @import "header";
