@@ -346,6 +346,29 @@ nav .shopContainer {
   height: 100%;
 }
 
+nav .shopContainer input {
+  position: absolute;
+  display: block;
+  width: 70px;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+nav .shopContainer input[type="checkbox"]:checked ~ .shop {
+  background-color: #f2ba1f;
+}
+
+nav .shopContainer input[type="checkbox"]:checked ~ .shop svg {
+  fill: white;
+}
+
+nav .shopContainer input[type="checkbox"]:checked ~ .shop .counter {
+  background-color: white;
+  color: #f2ba1f;
+}
+
 nav .shopContainer .shop {
   display: -webkit-box;
   display: -ms-flexbox;
