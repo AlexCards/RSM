@@ -132,7 +132,9 @@ nav {
 
       .counter {
         @include flex(center, center);
-
+        font-family: RobotoCondensed;
+        font-weight: bold;
+        
         position: absolute;
 
         top: 10px;

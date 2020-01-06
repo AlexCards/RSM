@@ -381,6 +381,8 @@ nav .shopContainer .shop .counter {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: RobotoCondensed;
+  font-weight: bold;
   position: absolute;
   top: 10px;
   right: 10px;
