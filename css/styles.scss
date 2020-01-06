@@ -53,11 +53,10 @@ nav {
   margin: 30px auto 0px;
   display: grid;
   grid-template-columns: 960px 480px;
-  grid-template-rows: 70px 70px auto 340px;
+  grid-template-rows: 70px 70px 340px;
   grid-template-areas:
     "header header"
     "nav nav"
-    "fullCatalog fullCatalog"
     "slider catalog";
   grid-row-gap: 10px;
 }
