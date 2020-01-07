@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   src: url(/Fonts/Archive.otf);
   font-family: Archive;
@@ -344,13 +345,14 @@ nav .navs_container .close:hover img {
 
 nav .shopContainer {
   height: 100%;
+  position: relative;
 }
 
 nav .shopContainer input {
   position: absolute;
   display: block;
   width: 70px;
-  height: 100%;
+  height: 70px;
   opacity: 0;
   z-index: 1;
   cursor: pointer;
@@ -369,6 +371,15 @@ nav .shopContainer input[type="checkbox"]:checked ~ .shop .counter {
   color: #f2ba1f;
 }
 
+nav .shopContainer input[type="checkbox"]:checked ~ .shop .shopContent {
+  display: -ms-grid;
+  display: grid;
+}
+
+nav .shopContainer input[type="checkbox"]:checked ~ .shop:after {
+  display: block;
+}
+
 nav .shopContainer .shop {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -383,7 +394,6 @@ nav .shopContainer .shop {
   border-right: none;
   border-bottom: none;
   border-left: 1px solid #dfe4e6;
-  position: relative;
   width: 70px;
   height: 100%;
 }
@@ -392,6 +402,19 @@ nav .shopContainer .shop svg {
   width: 26px;
   height: 23px;
   fill: #a0aeb5;
+}
+
+nav .shopContainer .shop:after {
+  content: " ";
+  position: absolute;
+  display: none;
+  top: 100%;
+  right: 19px;
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
 }
 
 nav .shopContainer .shop .counter {
@@ -414,6 +437,94 @@ nav .shopContainer .shop .counter {
   border-radius: 200px;
   background-color: #efb526;
   color: white;
+}
+
+nav .shopContainer .shop .shopContent {
+  display: none;
+  -ms-grid-columns: 490px;
+      grid-template-columns: 490px;
+  -ms-grid-rows: 320px 79px;
+      grid-template-rows: 320px 79px;
+      grid-template-areas: "mainShopContent" "footerShopContent";
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  margin-top: 15px;
+  -webkit-box-shadow: 0px 0px 9px 0px rgba(173, 184, 184, 0.5);
+          box-shadow: 0px 0px 9px 0px rgba(173, 184, 184, 0.5);
+  background-color: white;
+}
+
+nav .shopContainer .shop .shopContent .mainShopContent {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: mainShopContent;
+  position: relative;
+  overflow-y: scroll;
+  max-height: 280px;
+  margin: auto 10px auto 0px;
+}
+
+nav .shopContainer .shop .shopContent .mainShopContent .shopingCartProduct {
+  background-color: lightcoral;
+  height: 100px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+nav .shopContainer .shop .shopContent .footerShopContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: footerShopContent;
+  border-top: 1px solid #e7e7e7;
+}
+
+nav .shopContainer .shop .shopContent .footerShopContent button {
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 2px;
+  background-color: #f2ba1f;
+  color: white;
+  margin: auto 0px auto 20px;
+}
+
+nav .shopContainer .shop .shopContent .footerShopContent p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #2f2f2f;
+}
+
+nav .shopContainer .shop .shopContent .footerShopContent p:before {
+  content: "Итоговая цена:";
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-right: 15px;
+  margin-left: 64px;
+}
+
+nav .shopContainer .shop .shopContent .footerShopContent p:after {
+  content: url(/SVG_Icons/ruble.svg);
+  display: inline-block;
+  width: 15px;
+  height: 18px;
+  margin-left: 8px;
+  -webkit-filter: invert(86%) sepia(12%) saturate(6720%) hue-rotate(346deg) brightness(103%) contrast(90%);
+          filter: invert(86%) sepia(12%) saturate(6720%) hue-rotate(346deg) brightness(103%) contrast(90%);
 }
 
 .fullCatalog {
@@ -484,8 +595,40 @@ nav .shopContainer .shop .counter {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: slider;
-  background-image: url(/Images/main_slider_01.jpg);
-  background-size: contain;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider .points {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.slider .points .point {
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 200px;
+  margin-right: 22px;
+}
+
+.slider .points .point:hover {
+  width: 10px;
+  height: 10px;
 }
 
 .catalog {

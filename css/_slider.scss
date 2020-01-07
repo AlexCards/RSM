@@ -1,8 +1,27 @@
 .slider {
   grid-area: slider;
 
-  background-image: url(/Images/main_slider_01.jpg);
-  background-size: contain;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .points {
+    @include flex(center, center);
+    position: absolute;
+    .point {
+      cursor: pointer;
+      width: 8px;
+      height: 8px;
+      background-color: black;
+      border-radius: 200px;
+      margin-right: 22px;
+      &:hover {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
 }
-
-
