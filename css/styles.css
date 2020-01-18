@@ -596,6 +596,72 @@ nav .shopContainer .shop .shopContent .footerShopContent p:after {
   -ms-grid-column: 1;
   grid-area: slider;
   overflow: hidden;
+  position: relative;
+}
+
+.slider .left,
+.slider .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 60px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  cursor: pointer;
+  background-color: #dee1e2;
+}
+
+.slider .left svg,
+.slider .right svg {
+  position: absolute;
+  width: 7px;
+  height: 10px;
+  fill: #2f2f2f;
+  -webkit-transition: margin 0.3s ease;
+  transition: margin 0.3s ease;
+}
+
+.slider .left:hover,
+.slider .right:hover {
+  background-color: #2f2f2f;
+}
+
+.slider .left:hover svg,
+.slider .right:hover svg {
+  fill: white;
+}
+
+.slider .left {
+  left: 0;
+  border-radius: 0 30px 30px 0;
+}
+
+.slider .left svg {
+  margin-left: 8px;
+}
+
+.slider .left:hover svg {
+  margin-left: 5px;
+}
+
+.slider .right {
+  right: 0;
+  border-radius: 30px 0 0 30px;
+}
+
+.slider .right svg {
+  margin-left: 15px;
+}
+
+.slider .right:hover svg {
+  margin-left: 18px;
 }
 
 .slider .sliderContent {

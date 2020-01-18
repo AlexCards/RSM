@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   let i = 0;
-  const time = 3000;
+  time = 5000;
 
-  setInterval(() => {
+  slider = () => {
     points[i].classList.remove("selected");
     switch (i) {
       case 0:
@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     points[i].classList.add("selected");
-  }, time);
+  };
+
+  let sliderInterval = setInterval(slider, time);
 
   for (point of points) {
     setOder(point);
@@ -48,7 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       points[this.style.order].classList.add("selected");
 
-      console.log(sliderContent.firstElementChild);
+      sliderContent.insertBefore(
+        slides[this.style.order],
+        sliderContent.firstElementChild
+      );
+
+      i = parseInt(this.style.order);
+
+      clearInterval(sliderInterval);
+      sliderInterval = setInterval(slider, time);
     });
   }
 });
