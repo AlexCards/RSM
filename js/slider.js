@@ -2,12 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const sliderContent = document.querySelector(".sliderContent");
   const slides = document.querySelectorAll(".slide");
   const points = document.querySelectorAll(".point");
+  const rightArrow = document.querySelector(".right");
+  const leftArrow = document.querySelector(".left");
 
   let counter = 0;
 
   const setOder = element => {
     element.style.order = counter;
     counter++;
+  };
+
+  const classListCleaner = (elements, element, classList) => {
+    for (element of elements) {
+      element.classList.remove(classList);
+    }
   };
 
   let i = 0;
@@ -45,9 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setOder(point);
 
     point.addEventListener("click", function() {
-      for (point of points) {
-        point.classList.remove("selected");
-      }
+      classListCleaner(points, point, "selected");
+
       points[this.style.order].classList.add("selected");
 
       sliderContent.insertBefore(
@@ -61,4 +68,43 @@ document.addEventListener("DOMContentLoaded", () => {
       sliderInterval = setInterval(slider, time);
     });
   }
+
+  for (arrow of document.querySelectorAll(".arrows")) {
+    arrow.addEventListener("click", () => {
+      clearInterval(sliderInterval);
+      sliderInterval = setInterval(slider, time);
+    });
+  }
+
+  rightArrow.addEventListener("click", () => {
+    classListCleaner(points, point, "selected");
+
+    if (i === 4) {
+      sliderContent.insertBefore(slides[0], slides[i]);
+      points[0].classList.add("selected");
+
+      return (i = 0);
+    } else {
+      points[i + 1].classList.add("selected");
+      sliderContent.insertBefore(slides[i + 1], slides[i]);
+
+      return i++;
+    }
+  });
+
+  leftArrow.addEventListener("click", () => {
+    classListCleaner(points, point, "selected");
+
+    if (i === 0) {
+      sliderContent.insertBefore(slides[4], slides[i]);
+      points[4].classList.add("selected");
+
+      return (i = 4);
+    } else {
+      sliderContent.insertBefore(slides[i - 1], slides[i]);
+      points[i - 1].classList.add("selected");
+
+      return i--;
+    }
+  });
 });

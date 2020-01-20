@@ -731,6 +731,20 @@ nav .shopContainer .shop .shopContent .footerShopContent p:after {
   background-size: contain;
   width: 470px;
       justify-self: end;
+  cursor: pointer;
+}
+
+.catalog .text {
+  position: relative;
+  width: 160px;
+  height: 280px;
+  color: white;
+  margin: 30px 0px 0px 30px;
+}
+
+.catalog .text :nth-child(2) {
+  position: absolute;
+  bottom: 0px;
 }
 
 * {
