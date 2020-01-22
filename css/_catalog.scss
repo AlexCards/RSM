@@ -6,6 +6,8 @@
   justify-self: end;
   cursor: pointer;
 
+  z-index: -1;
+
   &:before {
     display: block;
     width: 100%;

@@ -731,6 +731,7 @@ nav .shopContainer .shop .shopContent .footerShopContent p:after {
   width: 470px;
       justify-self: end;
   cursor: pointer;
+  z-index: -1;
 }
 
 .catalog:before {
