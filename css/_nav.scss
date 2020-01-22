@@ -12,7 +12,7 @@ nav {
 
     .dropdown {
       width: 220px;
-      z-index: 2;
+      z-index: 3;
       position: relative;
 
       &:hover {
@@ -136,6 +136,7 @@ nav {
       }
       .shopContent {
         display: grid;
+        z-index: 2;
       }
       &:after {
         display: block;

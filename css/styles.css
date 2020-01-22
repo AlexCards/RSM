@@ -211,7 +211,7 @@ nav .navs_container {
 
 nav .navs_container .dropdown {
   width: 220px;
-  z-index: 2;
+  z-index: 3;
   position: relative;
 }
 
@@ -374,6 +374,7 @@ nav .shopContainer input[type="checkbox"]:checked ~ .shop .counter {
 nav .shopContainer input[type="checkbox"]:checked ~ .shop .shopContent {
   display: -ms-grid;
   display: grid;
+  z-index: 2;
 }
 
 nav .shopContainer input[type="checkbox"]:checked ~ .shop:after {
@@ -731,7 +732,7 @@ nav .shopContainer .shop .shopContent .footerShopContent p:after {
   width: 470px;
       justify-self: end;
   cursor: pointer;
-  z-index: -1;
+  z-index: 0;
 }
 
 .catalog:before {
