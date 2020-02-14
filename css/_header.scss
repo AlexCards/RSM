@@ -7,33 +7,7 @@ header {
 
   background-color: #ffffff;
 
-  .logoContainer {
-    @include flex(center, center);
-
-    width: 240px;
-    height: 70px;
-
-    background-color: #ffcd00;
-
-    cursor: pointer;
-    .bolt {
-      width: 7.5px;
-      height: 8px;
-      margin: 7px;
-      fill: white;
-    }
-    .rsm {
-      width: 70px;
-      height: 25px;
-      margin-right: 7px;
-      fill: #333333;
-    }
-    .shop {
-      width: 94px;
-      height: 25px;
-      fill: white;
-    }
-  }
+  @include logo(#ffcd00, white, #333333);
 
   .headerNav {
     @include flex(space-around, center);
@@ -126,7 +100,8 @@ header {
       height: 20px;
     }
 
-    button, input{
+    button,
+    input {
       outline: none;
     }
   }

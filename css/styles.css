@@ -175,7 +175,8 @@ header .search button svg {
   height: 20px;
 }
 
-header .search button, header .search input {
+header .search button,
+header .search input {
   outline: none;
 }
 
@@ -1164,6 +1165,120 @@ section .sec:hover figcaption:after {
   -webkit-filter: invert(0%);
           filter: invert(0%);
   background-color: #f2ba1f;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 447px;
+  border-top: 3px solid #494949;
+  margin-top: 100px;
+  background-color: #333333;
+}
+
+footer .footerContainer {
+  height: 350px;
+  padding-top: 27px;
+  width: 1440px;
+  margin: auto;
+}
+
+footer .footerContainer .mainInfo {
+  position: relative;
+  height: 350px;
+}
+
+footer .footerContainer .mainInfo .logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 240px;
+  height: 70px;
+  background-color: #333333;
+  cursor: pointer;
+}
+
+footer .footerContainer .mainInfo .logoContainer .bolt {
+  width: 7.5px;
+  height: 8px;
+  margin: 7px;
+  fill: #ffcd00;
+}
+
+footer .footerContainer .mainInfo .logoContainer .rsm {
+  width: 70px;
+  height: 25px;
+  margin-right: 7px;
+  fill: white;
+}
+
+footer .footerContainer .mainInfo .logoContainer .shop {
+  width: 94px;
+  height: 25px;
+  fill: #ffcd00;
+}
+
+footer .footerContainer .mainInfo .logoContainer {
+  height: 50px;
+  position: absolute;
+  left: -34px;
+}
+
+footer .footerContainer .mainInfo p {
+  position: absolute;
+  top: 80px;
+  font-family: RobotoCondensed;
+  font-size: 14px;
+  letter-spacing: 0.025em;
+  line-height: 20px;
+  color: #808080;
+}
+
+footer .footerContainer .mainInfo .phone {
+  top: 124px;
+  font-family: Roboto;
+  font-size: 20px;
+}
+
+footer .footerContainer .mainInfo .location {
+  top: 259px;
+}
+
+footer .footerContainer .mainInfo .location:before {
+  content: url(/SVG_Icons/place.svg);
+  position: absolute;
+  top: -38px;
+  display: block;
+  width: 18px;
+  height: 23px;
+  -webkit-filter: invert(38%) sepia(0%) saturate(30%) hue-rotate(250deg) brightness(101%) contrast(87%);
+          filter: invert(38%) sepia(0%) saturate(30%) hue-rotate(250deg) brightness(101%) contrast(87%);
+}
+
+footer .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 69px;
+  width: 100%;
+  border-top: 1px solid #494949;
+  font-size: 10px;
+  line-height: 12px;
+  color: #999999;
 }
 
 * {
