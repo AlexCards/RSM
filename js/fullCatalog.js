@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(
       ".container"
-    ).style.gridTemplateAreas = `"header header" "nav nav" "fullCatalog fullCatalog" "slider catalog"`;
+    ).style.gridTemplateAreas = `"header header" "nav nav" "fullCatalog fullCatalog" "slider catalog" "main main" "section section"`;
   };
 
   const closeFullCatalog = () => {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(
       ".container"
-    ).style.gridTemplateAreas = `"header header" "nav nav" "slider catalog"`;
+    ).style.gridTemplateAreas = `"header header" "nav nav" "slider catalog" "main main" "section section"`;
   };
 
   btn.addEventListener("click", function() {

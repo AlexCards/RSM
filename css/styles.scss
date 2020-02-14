@@ -1,6 +1,7 @@
 @font-face {
   src: url(/Fonts/Archive.otf);
   font-family: Archive;
+
   src: url(/Fonts/Roboto-Bold.ttf);
   src: url(/Fonts/Roboto-BoldItalic.ttf);
   src: url(/Fonts/Roboto-Italic.ttf);
@@ -9,6 +10,7 @@
   src: url(/Fonts/Roboto-Regular.ttf);
   src: url(/Fonts/Roboto-Thin.ttf);
   font-family: Roboto;
+
   src: url(/Fonts/RobotoCondensed-Bold.ttf);
   src: url(/Fonts/RobotoCondensed-Regular.ttf);
   font-family: RobotoCondensed;
@@ -18,6 +20,9 @@
 @import "nav";
 @import "slider";
 @import "catalog";
+@import "main";
+@import "section";
+@import "footer";
 
 @import "mixins";
 
@@ -53,10 +58,12 @@ nav {
   margin: 30px auto 0px;
   display: grid;
   grid-template-columns: 960px 480px;
-  grid-template-rows: 70px 70px 340px;
+  grid-template-rows: 70px 70px 340px 460px 360px;
   grid-template-areas:
     "header header"
     "nav nav"
-    "slider catalog";
+    "slider catalog"
+    "main main"
+    "section section";
   grid-row-gap: 10px;
 }
