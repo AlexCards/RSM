@@ -9,14 +9,18 @@ footer {
   background-color: #333333;
 
   .footerContainer {
-    // @include flex(center, center);
+    @include flex(center, center);
+
+    position: absolute;
+    top: 27px;
+
     height: 350px;
-    padding-top: 27px;
 
     .mainInfo {
       @include logo(#333333, #ffcd00, white);
 
       position: relative;
+      width: 206px;
       height: 350px;
 
       .logoContainer {
@@ -66,8 +70,42 @@ footer {
     margin: auto;
 
     table {
-      //   display: none;
+      align-self: flex-start;
+      thead {
+        th {
+          height: 50px;
+
+          font-size: 16px;
+          font-weight: 500;
+
+          line-height: 18px;
+          letter-spacing: 0.05em;
+
+          text-transform: uppercase;
+          text-align: left;
+
+          color: #808080;
+        }
+      }
+      tbody {
+        td a {
+          font-size: 14px;
+          line-height: 30px;
+          color: #808080;
+          &:hover {
+            color: #f2ba1f;
+          }
+        }
+      }
+
+      &:hover {
+        a {
+          color: white;
+        }
+      }
     }
+    
+    
   }
 
   .copyright {

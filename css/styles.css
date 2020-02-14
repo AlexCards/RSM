@@ -1177,14 +1177,25 @@ footer {
 }
 
 footer .footerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 27px;
   height: 350px;
-  padding-top: 27px;
   width: 1440px;
   margin: auto;
 }
 
 footer .footerContainer .mainInfo {
   position: relative;
+  width: 206px;
   height: 350px;
 }
 
@@ -1259,6 +1270,36 @@ footer .footerContainer .mainInfo .location:before {
   height: 23px;
   -webkit-filter: invert(38%) sepia(0%) saturate(30%) hue-rotate(250deg) brightness(101%) contrast(87%);
           filter: invert(38%) sepia(0%) saturate(30%) hue-rotate(250deg) brightness(101%) contrast(87%);
+}
+
+footer .footerContainer table {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+footer .footerContainer table thead th {
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+  color: #808080;
+}
+
+footer .footerContainer table tbody td a {
+  font-size: 14px;
+  line-height: 30px;
+  color: #808080;
+}
+
+footer .footerContainer table tbody td a:hover {
+  color: #f2ba1f;
+}
+
+footer .footerContainer table:hover a {
+  color: white;
 }
 
 footer .copyright {
