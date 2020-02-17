@@ -9,10 +9,13 @@ footer {
   background-color: #333333;
 
   .footerContainer {
-    @include flex(center, center);
+    @include flex(space-between, center);
 
     position: absolute;
     top: 27px;
+
+    left: 50%;
+    transform: translate(-50%);
 
     height: 350px;
 
@@ -69,24 +72,26 @@ footer {
     width: 1440px;
     margin: auto;
 
-    table {
+    th,
+    .subscription p {
+      @include flex(flex-start, center);
+      height: 50px;
+
+      font-size: 16px;
+      font-weight: 500;
+
+      line-height: 18px;
+      letter-spacing: 0.05em;
+
+      text-transform: uppercase;
+
+      color: #808080;
+    }
+
+    table,
+    .subscription {
       align-self: flex-start;
-      thead {
-        th {
-          height: 50px;
 
-          font-size: 16px;
-          font-weight: 500;
-
-          line-height: 18px;
-          letter-spacing: 0.05em;
-
-          text-transform: uppercase;
-          text-align: left;
-
-          color: #808080;
-        }
-      }
       tbody {
         td a {
           font-size: 14px;
@@ -104,8 +109,94 @@ footer {
         }
       }
     }
-    
-    
+  }
+
+  .subscription {
+    form {
+      display: flex;
+    }
+    input {
+      width: 238px;
+
+      border-top: 2px solid #4d4d4d;
+      border-bottom: 2px solid #4d4d4d;
+      border-left: 2px solid #4d4d4d;
+      border-right: none;
+
+      background-color: #333333;
+
+      font-size: 16px;
+      color: white;
+
+      padding-left: 8px;
+
+      &:placeholder-shown,
+      &:focus {
+        font-size: 16px;
+        color: white;
+        padding-left: 8px;
+      }
+    }
+
+    button {
+      width: 118px;
+
+      border-top: 2px solid #4d4d4d;
+      border-bottom: 2px solid #4d4d4d;
+      border-right: 2px solid #4d4d4d;
+      border-left: none;
+
+      font-size: 14px;
+      line-height: 18px;
+      color: white;
+
+      background-color: #4d4d4d;
+
+      cursor: pointer;
+    }
+
+    input,
+    button {
+      height: 46px;
+      outline: none;
+      border-radius: 2px;
+    }
+
+    .icons {
+      margin-top: 10px;
+      display: flex;
+
+      .vk {
+        margin-right: 10px;
+      }
+      .vk,
+      .instagram {
+        @include flex(center, center);
+
+        width: 48px;
+        height: 48px;
+
+        border: 2px solid #f2ba1f;
+        border-radius: 2px;
+
+        cursor: pointer;
+      }
+
+      .instagram svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .vk svg {
+        width: 26px;
+        height: 14px;
+      }
+
+      .vk svg,
+      .instagram svg {
+        fill: #f2ba1f;
+      }
+    }
   }
 
   .copyright {

@@ -1180,14 +1180,17 @@ footer .footerContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
   top: 27px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   height: 350px;
   width: 1440px;
   margin: auto;
@@ -1272,34 +1275,135 @@ footer .footerContainer .mainInfo .location:before {
           filter: invert(38%) sepia(0%) saturate(30%) hue-rotate(250deg) brightness(101%) contrast(87%);
 }
 
-footer .footerContainer table {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-}
-
-footer .footerContainer table thead th {
+footer .footerContainer th,
+footer .footerContainer .subscription p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 50px;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  text-align: left;
   color: #808080;
 }
 
-footer .footerContainer table tbody td a {
+footer .footerContainer table,
+footer .footerContainer .subscription {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+footer .footerContainer table tbody td a,
+footer .footerContainer .subscription tbody td a {
   font-size: 14px;
   line-height: 30px;
   color: #808080;
 }
 
-footer .footerContainer table tbody td a:hover {
+footer .footerContainer table tbody td a:hover,
+footer .footerContainer .subscription tbody td a:hover {
   color: #f2ba1f;
 }
 
-footer .footerContainer table:hover a {
+footer .footerContainer table:hover a,
+footer .footerContainer .subscription:hover a {
   color: white;
+}
+
+footer .subscription form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .subscription input {
+  width: 238px;
+  border-top: 2px solid #4d4d4d;
+  border-bottom: 2px solid #4d4d4d;
+  border-left: 2px solid #4d4d4d;
+  border-right: none;
+  background-color: #333333;
+  font-size: 16px;
+  color: white;
+  padding-left: 8px;
+}
+
+footer .subscription input:placeholder-shown, footer .subscription input:focus {
+  font-size: 16px;
+  color: white;
+  padding-left: 8px;
+}
+
+footer .subscription button {
+  width: 118px;
+  border-top: 2px solid #4d4d4d;
+  border-bottom: 2px solid #4d4d4d;
+  border-right: 2px solid #4d4d4d;
+  border-left: none;
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+  background-color: #4d4d4d;
+  cursor: pointer;
+}
+
+footer .subscription input,
+footer .subscription button {
+  height: 46px;
+  outline: none;
+  border-radius: 2px;
+}
+
+footer .subscription .icons {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .subscription .icons .vk {
+  margin-right: 10px;
+}
+
+footer .subscription .icons .vk,
+footer .subscription .icons .instagram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #f2ba1f;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+footer .subscription .icons .instagram svg {
+  width: 24px;
+  height: 24px;
+}
+
+footer .subscription .icons .vk svg {
+  width: 26px;
+  height: 14px;
+}
+
+footer .subscription .icons .vk svg,
+footer .subscription .icons .instagram svg {
+  fill: #f2ba1f;
 }
 
 footer .copyright {
